@@ -1,9 +1,9 @@
 
-# Miranda
+# ReadMe Generator
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Description 
-  Miranda
+  Application that dynamically generates a readMe file through the inputs of the user in the command line
 
 ## Table of contents
   - [Description](#Description)
@@ -16,19 +16,19 @@
   - [GitHub Info](#GitHub) 
 
 ## Installation
-  Miranda
+  Node, inquirer, axios
 
 ## Usage
-  Miranda
+  Start the application by entering node index.js in the command line
 
 ## Contributors
-  Miranda
+  Miranda Ramírez (only me)
 
 ## Licence
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Test
-  Yes
+  To be defined
 
 ## Github
   * Username: Mirandarmz
@@ -36,7 +36,7 @@
 ![Avatar](https://avatars.githubusercontent.com/u/35553150?v=4)
 
   * Link to Github Profile:
-[https://api.github.com/users/Mirandarmz](https://api.github.com/users/Mirandarmz)
+[https://github.com/Mirandarmz](https://github.com/Mirandarmz)
 
 ## Contact info
   If you have any more questions, please contact me via email:

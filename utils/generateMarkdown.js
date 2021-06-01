@@ -1,3 +1,4 @@
+//Function that renders only the badges of the license depending on the license selected by the user
 function renderLicenseBadge(license) {
   switch (license) {
     case "BSD 3-Clause":
@@ -14,7 +15,7 @@ function renderLicenseBadge(license) {
       return "";
   }
 }
-// TODO: Create a function that returns a license badge and license link based on which license is passed in
+// Function that returns a license badge and license link based on which license is passed in
 // If there is no license, return an empty string
 function renderLicense(license) {
   switch (license) {
@@ -33,8 +34,8 @@ function renderLicense(license) {
   }
 }
 
-// TODO: Create a function to generate markdown for README
-function generateMarkdown(data,ghAvatar,ghLink) {
+// Function that returns a string with all of the data that will be written into the ReadMe file
+function generateMarkdown(data, ghAvatar, ghLink) {
   return `
 # ${data.title}
 ${renderLicenseBadge(data.license)}
@@ -82,4 +83,5 @@ ${renderLicenseBadge(data.license)}
   `;
 }
 
+//Exporting the file so that it can be imported in the index.js so that the functions written here can be used there 
 module.exports = generateMarkdown;
