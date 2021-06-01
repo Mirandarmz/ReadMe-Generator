@@ -21,8 +21,6 @@ node index.js
 
 ## Walkthrough video:
 
-![Walkthrough Video](./Assets/Walkthrough.gif)
-
 * Link to walkthrough video: [Link to Video](https://drive.google.com/file/d/1fyeg2D3L6TeJeUTlqD0GUY31FeLjV18m/view?usp=sharing)
 
 ## Screenshot of the resulting ReadMe file 
