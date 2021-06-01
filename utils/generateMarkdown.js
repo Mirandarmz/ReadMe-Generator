@@ -1,5 +1,3 @@
-const axios = require("axios");
-
 function renderLicenseBadge(license) {
   switch (license) {
     case "BSD 3-Clause":
