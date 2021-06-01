@@ -41,7 +41,6 @@ const questions = [
           "GNU General Public License",
           "MIT License",
           "Mozilla Public License",
-          "Other",
           "None",
         ],
     },
