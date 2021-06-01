@@ -3,7 +3,6 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown");
 
-
 // TODO: Create an array of questions for user input
 const questions = [
   {
@@ -29,42 +28,51 @@ const questions = [
   {
     type: "input",
     name: "contributors",
-    message: "Enter the names of the contributors, separated by a comma (Ex. Miranda Ramírez,Felipe Lozano)",
+    message:
+      "Enter the names of the contributors, separated by a comma (Ex. Miranda Ramírez,Felipe Lozano)",
   },
   {
-      type: "list",
-      name: "license",
-      message: "If its the case, select the proyect's from the list",
-      choices: [
-          "BSD 3-Clause",
-          "Apache License 2.0",
-          "GNU General Public License",
-          "MIT License",
-          "Mozilla Public License",
-          "None",
-        ],
-    },
-    {
-      type: "input",
-      name: "tests",
-      message: "How would you run tests on this project?",
-    },
+    type: "list",
+    name: "license",
+    message: "If its the case, select the proyect's from the list",
+    choices: [
+      "BSD 3-Clause",
+      "Apache License 2.0",
+      "GNU General Public License",
+      "MIT License",
+      "Mozilla Public License",
+      "None",
+    ],
+  },
+  {
+    type: "input",
+    name: "tests",
+    message: "How would you run tests on this project?",
+  },
+  {
+    type: "input",
+    name: "github",
+    message: "Please enter your github username",
+  },
+  {
+    type: "input",
+    name: "email",
+    message: "Please enter your email",
+  },
 ];
 
-inquirer.prompt(questions).then(answers => {
-    writeToFile("GeneratedReadMe.md",generateMarkdown(answers));
+inquirer.prompt(questions).then((answers) => {
+  writeToFile("GeneratedReadMe.md", generateMarkdown(answers));
 });
-
-
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, function(err){
-        if(err){
-            console.log(err);
-        }
-            console.log("ReadMe generated correctly!");
-    });
+  fs.writeFile(fileName, data, function (err) {
+    if (err) {
+      console.log(err);
+    }
+    console.log("ReadMe generated correctly!");
+  });
 }
 
 // TODO: Create a function to initialize app

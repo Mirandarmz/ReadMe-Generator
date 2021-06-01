@@ -30,28 +30,22 @@ function renderLicense(license) {
     case "Mozilla Public License":
       return '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)';
     case "None":
-      return "";
+      return "No license used in the proyect";
   }
 
 }
 
 console.log(renderLicense("BSD 3-Clause"));
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `
 # ${data.title}
 ${renderLicenseBadge(data.license)}
+
 ## Description 
   ${data.description}
+
 ## Table of contents
   - [Description](#Description)
   - [Installation](#Installation)
@@ -61,16 +55,28 @@ ${renderLicenseBadge(data.license)}
   - [Test](#Test)
   - [Repository Link](#Repository)
   - [GitHub Info](#GitHub) 
+
 ## Installation
   ${data.install}
+
 ## Usage
   ${data.usage}
+
 ## Contributors
   ${data.contributors}
+
 ## Licence
   ${renderLicense(data.license)}
+
 ## Test
   ${data.tests}
+
+## Github
+
+## Contact info
+If you have any more questions, please contact me via email:
+[mailto](mailto:${data.email})
+
 `;
 }
 
