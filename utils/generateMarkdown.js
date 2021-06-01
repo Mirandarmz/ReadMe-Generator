@@ -36,46 +36,51 @@ function renderLicense(license) {
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data,githubResp) {
+function generateMarkdown(data,ghAvatar,ghLink) {
   return `
-  # ${data.title}
-  ${renderLicenseBadge(data.license)}
-  
-  ## Description 
-    ${data.description}
-  
-  ## Table of contents
-    - [Description](#Description)
-    - [Installation](#Installation)
-    - [Usage](#Usage)
-    - [Licence](#Licence)
-    - [Contributors](#Contributors)
-    - [Test](#Test)
-    - [Repository Link](#Repository)
-    - [GitHub Info](#GitHub) 
-  
-  ## Installation
-    ${data.install}
-  
-  ## Usage
-    ${data.usage}
-  
-  ## Contributors
-    ${data.contributors}
-  
-  ## Licence
-    ${renderLicense(data.license)}
-  
-  ## Test
-    ${data.tests}
-  
-  ## Github
-    ${githubResp}
-  
-  ## Contact info
-    If you have any more questions, please contact me via email:
-    [${data.email}](mailto:${data.email})
-  
+# ${data.title}
+${renderLicenseBadge(data.license)}
+
+## Description 
+  ${data.description}
+
+## Table of contents
+  - [Description](#Description)
+  - [Installation](#Installation)
+  - [Usage](#Usage)
+  - [Licence](#Licence)
+  - [Contributors](#Contributors)
+  - [Test](#Test)
+  - [Repository Link](#Repository)
+  - [GitHub Info](#GitHub) 
+
+## Installation
+  ${data.install}
+
+## Usage
+  ${data.usage}
+
+## Contributors
+  ${data.contributors}
+
+## Licence
+  ${renderLicense(data.license)}
+
+## Test
+  ${data.tests}
+
+## Github
+  * Username: ${data.github}
+  * Github Profile Image:
+![Avatar](${ghAvatar})
+
+  * Link to Github Profile:
+[${ghLink}](${ghLink})
+
+## Contact info
+  If you have any more questions, please contact me via email:
+[${data.email}](mailto:${data.email})
+
   `;
 }
 

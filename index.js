@@ -67,10 +67,9 @@ inquirer.prompt(questions).then((answers) => {
         axios
           .get("https://api.github.com/users/" + answers.github)
           .then(function (response) {
-            const githubResp = `* Username: ${response.data.login}
-          * Profile image: ![Avatar](${response.data.avatar_url})
-          * Link to profile: [Profile](${response.data.url})`;
-            writeToFile("GeneratedReadMe.md", generateMarkdown(answers,githubResp));
+            const ghAvatar=response.data.avatar_url;
+            const ghLink=response.data.url;
+            writeToFile("GeneratedReadMe.md", generateMarkdown(answers,ghAvatar,ghLink));
           })
           .catch(function (error) {
             // handle error
